@@ -2,3 +2,4 @@ jupyter
 scipy
 matplotlib
 sklearn
+nose
