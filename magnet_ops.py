@@ -1,6 +1,7 @@
 import tensorflow as tf
 import numpy as np
 
+
 def magnet_loss(r, classes, clusters, cluster_classes, n_clusters, alpha=1.0):
     """Compute magnet loss.
 
@@ -62,7 +63,6 @@ def magnet_loss(r, classes, clusters, cluster_classes, n_clusters, alpha=1.0):
     return total_loss, losses
 
 
-
 def minibatch_magnet_loss(r, classes, m, d, alpha=1.0):
     """Compute minibatch magnet loss.
 
@@ -91,6 +91,3 @@ def minibatch_magnet_loss(r, classes, m, d, alpha=1.0):
     cluster_classes = tf.strided_slice(classes, [0], [m*d], [d])
     
     return magnet_loss(r, classes, clusters, cluster_classes, m, alpha)
-
-
-
