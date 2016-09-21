@@ -1,5 +1,7 @@
 # Magnet Loss in Tensorflow
 
+![Figure 3 from paper](https://raw.githubusercontent.com/pumpikano/tf-magnet-loss/master/magnet_loss.png)
+
 "[Metric Learning with Adaptive Density Discrimination](http://arxiv.org/pdf/1511.05939v2.pdf)" introduced
 a new optimization objective for distance metric learning called Magnet Loss that, unlike related losses,
 operates on entire neighborhoods in the representation space and adaptively defines the similarity that is
