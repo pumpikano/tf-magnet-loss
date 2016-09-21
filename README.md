@@ -7,6 +7,8 @@ being optimized to account for the changing representations of the training data
 
 ## Implementation
 
+This implementation requires Tensorflow>=0.10.
+
 The Magnet Loss function is implemented in `magnet_ops.py`. The function `magnet_loss` implements the exact
 loss function and requires class and cluster labels for each example. This formulation allows varying numbers
 of clusters per class. The `minibatch_magnet_loss` is a thin wrapper around `magnet_loss` that assumes a
