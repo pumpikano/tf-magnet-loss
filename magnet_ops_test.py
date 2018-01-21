@@ -10,7 +10,6 @@ def test_magnet_loss():
     # Hyperparams
     m = 6
     d = 4
-    K = 5
 
     # Sample test data
     rdata = rand.random_sample([m*d, 8])
