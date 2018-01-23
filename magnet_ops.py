@@ -32,7 +32,7 @@ def magnet_loss(r, classes, clusters, cluster_classes, n_clusters, alpha=1.0):
 
     # Take cluster means within the batch
     cluster_examples = tf.dynamic_partition(r, clusters, n_clusters)
-    cluster_means = tf.pack([tf.reduce_mean(x, 0) for x in cluster_examples])
+    cluster_means = tf.stack([tf.reduce_mean(x, 0) for x in cluster_examples])
 
     # Compute squared distance of each example to each cluster centroid
     sample_costs = tf.squared_difference(cluster_means, tf.expand_dims(r, 1))
